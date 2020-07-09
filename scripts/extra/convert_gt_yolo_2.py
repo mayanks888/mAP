@@ -24,7 +24,7 @@ def convert_yolo_coordinates_to_voc(x_c_n, y_c_n, width_n, height_n, img_width, 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # read the class_list.txt to a list
-with open("class_list.txt") as f:
+with open("coco_class_list.txt") as f:
   obj_list = f.readlines()
 ## remove whitespace characters like `\n` at the end of each line
   obj_list = [x.strip() for x in obj_list]
@@ -56,11 +56,12 @@ for tmp_file in txt_list:
   image_name = tmp_file.split(".txt",1)[0]
   #print(image_name)
   ## check if image exists
-  for fname in os.listdir('../images'):
+  image_dir="/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/coco/images/val2014"
+  for fname in os.listdir(image_dir):
     if fname.startswith(image_name):
       ## image found
       #print(fname)
-      img = cv2.imread('../images/' + fname)
+      img = cv2.imread(image_dir+'/'+ fname)
       ## get image width and height
       img_height, img_width = img.shape[:2]
       break
@@ -82,6 +83,11 @@ for tmp_file in txt_list:
       ## "c" stands for center and "n" stands for normalized
       obj_id, x_c_n, y_c_n, width_n, height_n = line.split()
       obj_name = obj_list[int(obj_id)]
+      if len(obj_name.split(" ")) > 1:
+        print(obj_name)
+        obj_name = obj_name.replace(" ", "_")
+        print(obj_name)
+      # print(obj_name)
       left, top, right, bottom = convert_yolo_coordinates_to_voc(x_c_n, y_c_n, width_n, height_n, img_width, img_height)
       ## add new line to file
       #print(obj_name + " " + str(left) + " " + str(top) + " " + str(right) + " " + str(bottom))

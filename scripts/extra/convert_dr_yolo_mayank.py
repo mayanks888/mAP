@@ -5,14 +5,22 @@ import re
 # make sure that the cwd() in the beginning is the location of the python script (so that every path makes sense)
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-IN_FILE = 'result2.txt'
-IN_FILE = '//home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/result.txt'
 
 # change directory to the one with the files to be changed
-parent_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
-parent_path = os.path.abspath(os.path.join(parent_path, os.pardir))
-DR_PATH = os.path.join(parent_path, 'input','detection-results')
+# parent_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+# parent_path = os.path.abspath(os.path.join(parent_path, os.pardir))
+# DR_PATH = os.path.join(parent_path, 'input','detection-results')
+# IN_FILE = 'result2.txt'
+#result from yolo file
+IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/mank_result/result_yolo_v3.txt'
+
+#where to place
+DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v3_coco_14"
+
+if not os.path.exists(DR_PATH):
+  os.makedirs(DR_PATH)
 #print(DR_PATH)
+
 os.chdir(DR_PATH)
 
 SEPARATOR_KEY = 'Enter Image Path:'
@@ -37,6 +45,11 @@ with open(IN_FILE) as infile:
         elif outfile is not None:
             # split line on first occurrence of the character ':' and '%'
             class_name, info = line.split(':', 1)
+            # if class_name.split(" "):
+            if len(class_name.split(" "))>1:
+                print(class_name)
+                class_name=class_name.replace(" ", "_")
+                print(class_name)
             confidence, bbox = info.split('%', 1)
             # get all the coordinates of the bounding box
             bbox = bbox.replace(')','') # remove the character ')'

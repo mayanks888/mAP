@@ -15,8 +15,13 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 parent_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 parent_path = os.path.abspath(os.path.join(parent_path, os.pardir))
-GT_PATH = os.path.join(parent_path, 'input','ground-truth')
-DR_PATH = os.path.join(parent_path, 'input','detection-results')
+
+# GT_PATH = os.path.join(parent_path, 'input','ground-truth')
+# DR_PATH = os.path.join(parent_path, 'input','detection-results')
+
+GT_PATH = "/home/mayank_s/datasets/detection_result/coco_14_groundtruth"
+DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v3_coco_14"
+
 
 backup_folder = 'backup_no_matches_found' # must end without slash
 

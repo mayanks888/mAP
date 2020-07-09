@@ -1,4 +1,4 @@
-Total BFLOPS 65.864 
+/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/result.txtTotal BFLOPS 65.864
 
  seen 64 
 Enter Image Path: data/horses.jpg: Predicted in 42.076185 seconds.
