@@ -51,7 +51,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 IMG_PATH = os.path.join(os.getcwd(), 'input', 'images-optional')
 #################################33333
 GT_PATH = "/home/mayank_s/datasets/detection_result/coco_14_groundtruth"
-DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v3_coco_14"
+DR_PATH = "/home/mayank_s/datasets/detection_result/fake"
 
 # if there are no images then no animation can be shown
 IMG_PATH = os.path.join(os.getcwd(), 'input', 'images-optional')

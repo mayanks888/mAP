@@ -2,6 +2,14 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Cartucho/mAP.svg?style=social&label=Stars)](https://github.com/Cartucho/mAP)
 
+This code is inspired from https://github.com/Cartucho/mAP, and in future following modification will be made 
+1. Evaluation metrics with Pascal voc with multiple iou
+2. Coco evaluation metrics
+3. Blops calculation
+4. FPS measurement
+5. Metrics providing more information about model performance.
+6. Conversion of one datasets to other format
+
 This code will evaluate the performance of your neural net for object recognition.
 
 <p align="center">
