@@ -21,7 +21,7 @@ parent_path = os.path.abspath(os.path.join(parent_path, os.pardir))
 
 GT_PATH = "/home/mayank_s/datasets/detection_result/coco_14_groundtruth"
 # DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v4_coco_14_412_size"
-DR_PATH = "/home/mayank_s/datasets/detection_result/fake"
+DR_PATH = "/home/mayank_s/datasets/detection_result/fake2"
 
 
 backup_folder = 'backup_no_matches_found' # must end without slash

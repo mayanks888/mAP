@@ -3,15 +3,18 @@ import os
 import glob
 import json
 import pandas as pd
+from utils import *
 
-
-with open("coco_class_list.txt") as f:
+# with open("coco_class_list.txt") as f:
+with open("coco_paper_names.txt") as f:
   obj_list = f.readlines()
 ## remove whitespace characters like `\n` at the end of each line
   obj_list = [x.strip() for x in obj_list]
 
 
 filepath="/home/mayank_s/codebase/others/yolo/yolov4/yolov3/results.json"
+# filepath="results.json"
+
 # create VOC format files
 bblabel=[]
 json_list = glob.glob(filepath)
@@ -31,21 +34,27 @@ for tmp_file in json_list:
       ymin = obj['bbox'][1]
       xmax = obj['bbox'][2]+xmin
       ymax = obj['bbox'][3]+ymin
-      obj_id = obj['category_id'][0]
+      # box_=[xmin,ymin,xmax,ymax]
+      # box2=xywh2xyxy(box_)
+      obj_id = obj['category_id']
+      # obj_id = obj['category_id'][0]
       print(obj_id)
+      if file_name=="164":
+        print('hurrr')
+      print(file_name)
       obj_name = obj_list[int(obj_id)]
-      print(obj_name)
+      # print(obj_name)
       width=height=0
-      data_label = [file_name, width, height, obj_name, xmin, ymin, xmax, ymax,conf]
+      data_label = [file_name, width, height, obj_name, obj_id,xmin, ymin, xmax, ymax, conf]
       # data_label = [file_name, width, height, object_name, xmin, ymin, xmax, ymax]
-      if not ((xmin == xmax) and (ymin == ymax)):
-        bblabel.append(data_label)
+      # if not ((xmin == xmax) and (ymin == ymax)):
+      bblabel.append(data_label)
         # print(file_name)
         # print()
-      else:
-        print("file_name")
+      # else:
+      #   print("file_name")
 
-columns = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax','conf']
+columns = ['filename', 'width', 'height', 'class','obj_category','xmin', 'ymin', 'xmax', 'ymax','conf']
 
 df = pd.DataFrame(bblabel, columns=columns)
 df.to_csv('yolo1.csv',index=False)

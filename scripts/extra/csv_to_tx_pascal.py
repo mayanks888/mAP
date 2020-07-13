@@ -1,10 +1,12 @@
+#never user the json file from the coco result, they something like (80class to 90 object thus destroy the whole thing somehow)
+# so try to create you own csv from prediction and then create txt file to compar properly
 from collections import namedtuple
 import os
 import pandas as pd
 
 csv_path='yolo1.csv'
 #where to place
-save_path = "/home/mayank_s/datasets/detection_result/fake"
+save_path = "/home/mayank_s/datasets/detection_result/fake2"
 
 data = pd.read_csv(csv_path)
 print(data.head())
