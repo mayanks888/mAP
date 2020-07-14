@@ -99,9 +99,10 @@ Step by step:
   3. [Create the detection-results files](#create-the-detection-results-files)
   4. Copy the detection-results files into the folder **input/detection-results/**
   5. Run the code:
-         ```
-         python main.py
-         ```
+        ```
+         python main_mayank.py
+         main_mayank_.autonomous.py
+        ```
 
 Optional (if you want to see the **animation**):
 

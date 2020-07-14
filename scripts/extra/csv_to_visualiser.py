@@ -5,6 +5,7 @@ import cv2
 import pandas as pd
 
 csv_path='yolo1.csv'
+csv_path='yolo_txt_to_csv.csv'
 root='/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/coco/images/val2014'
 saving_path = ""
 data = pd.read_csv(csv_path)

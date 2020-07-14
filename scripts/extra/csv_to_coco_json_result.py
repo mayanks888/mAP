@@ -3,8 +3,9 @@ import os
 import pandas as pd
 import json
 from utils import *
-
-csv_path='yolo1.csv'
+coco91class = coco80_to_coco91_class()
+csv_path='yolo_txt_to_csv.csv'
+# csv_path='yolo1.csv'
 data = pd.read_csv(csv_path)
 print(data.head())
 
@@ -35,6 +36,10 @@ for group in grouped:
             score=row['conf']
             obj_name=row["class"]
             obj_cat=row["obj_category"]
+            ################3
+
+            obj_cat=coco91class[int(obj_cat)]
+            #####################
             bbox = ((xmin), (ymin), (width), (height))
             # bbox = box2
             jdict.append({'image_id': int(filename), 'category_id': obj_cat, 'bbox': [round(x, 3) for x in bbox], 'score': round(score, 5)})
