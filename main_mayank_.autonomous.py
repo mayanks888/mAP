@@ -54,8 +54,8 @@ GT_PATH = "/home/mayank_s/datasets/detection_result/coco_14_groundtruth"
 # DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v3_coco_14"
 # DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v4_coco_14"
 # DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v4_coco_14_412_size"
-DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_gaussian_coco_14"
-# DR_PATH = "/home/mayank_s/datasets/detection_result/fake"
+# DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_gaussian_coco_14"
+DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v3_coco_516"
 
 # if there are no images then no animation can be shown
 IMG_PATH = os.path.join(os.getcwd(), 'input', 'images-optional')

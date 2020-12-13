@@ -51,11 +51,13 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 IMG_PATH = os.path.join(os.getcwd(), 'input', 'images-optional')
 #################################33333
 # GT_PATH = "/home/mayank_s/datasets/detection_result/coco_14_groundtruth"
-GT_PATH = "/home/mayank_s/datasets/detection_result/BDD_groundtruth"
-# DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v4_coco_14"
+# GT_PATH = "/home/mayank_s/datasets/detection_result/BDD_groundtruth"
+GT_PATH = "/home/mayank_s/datasets/detection_result/BDD_groundtruth/bdd_groundtruth"
 # DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v3_coco_14"
 # DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_gaussian_coco_14"
-DR_PATH = "/home/mayank_s/datasets/detection_result/bdd_datasets_gaussian"
+# DR_PATH = "/home/mayank_s/datasets/detection_result/bdd_datasets_gaussian"
+# DR_PATH = "/home/mayank_s/Desktop/bdd/bdd_centernet_predict"
+DR_PATH = "/home/mayank_s/Desktop/bdd/bdd_centrack_multitask_predict"
 # if there are no images then no animation can be shown
 IMG_PATH = os.path.join(os.getcwd(), 'input', 'images-optional')
 #######################################

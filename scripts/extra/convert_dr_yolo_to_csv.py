@@ -6,8 +6,8 @@ import pandas as pd
 
 
 # with open("coco_paper_names.txt") as f:
-# with open("coco_class_list.txt") as f:
-with open("bdd_names_list.txt") as f:
+with open("coco_class_list.txt") as f:
+# with open("bdd_names_list.txt") as f:
   obj_list = f.readlines()
 ## remove whitespace characters like `\n` at the end of each line
   obj_list = [x.strip() for x in obj_list]
@@ -15,7 +15,9 @@ with open("bdd_names_list.txt") as f:
 
 # IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/mank_result/result_yolo_v4.txt'
 # IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/mank_result/result_yolo_v3.txt'
-IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/mank_result/result_gaussian_bdd.txt'
+# IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/mank_result/result_gaussian_bdd.txt'
+# IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/result_yolo_512_v3.txt'
+IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/mank_result/yolo_v4_coco_412.txt'
 
 SEPARATOR_KEY = 'Enter Image Path:'
 IMG_FORMAT = '.jpg'

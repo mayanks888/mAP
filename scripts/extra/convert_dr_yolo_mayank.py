@@ -13,11 +13,11 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # IN_FILE = 'result2.txt'
 #result from yolo file
 # IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/yolo_v4_coco_412.txt'
-IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/result_gaussian_bdd_2.txt'
+IN_FILE = '/home/mayank_s/codebase/cplus_plus/ai/darknet_AlexeyAB/result_yolo_512_v3.txt'
 
 #where to place
 # DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v4_coco_14_412_size"
-DR_PATH = "/home/mayank_s/datasets/detection_result/bdd_datasets_gaussian"
+DR_PATH = "/home/mayank_s/datasets/detection_result/yolo_v3_coco_516"
 
 if not os.path.exists(DR_PATH):
   os.makedirs(DR_PATH)

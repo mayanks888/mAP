@@ -20,7 +20,7 @@ classes=['bus','light','traffic light','person','bike','truck','motor','car','tr
 # classes = ['traffic light']
 bblabel = []
 loop = 0
-# jason_path="/home/mayanksati/Documents/datasets/BDD/labels/bdd100k_labels_images_val.json"
+# jason_path="/home/mayank_s/codebase/others/centernet/mayank/CenterNet/exp/ctdet/default/results.json"
 jason_path = "/home/mayank_s/datasets/bdd/bdd100k_labels_release/bdd100k/labels/bdd100k_labels_images_val.json"
 image_path = "/home/mayank_s/datasets/bdd/bdd100k_images/bdd100k/images/100k/val"
 
@@ -86,4 +86,4 @@ columns = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax
 # pd1.to_csv('output_bb.csv')
 
 df = pd.DataFrame(bblabel, columns=columns)
-df.to_csv('BBD_daytime_val.csv',index=False)
+df.to_csv('BBD_groundtruth_val.csv',index=False)
